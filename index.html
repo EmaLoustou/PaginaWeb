@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Glow & Grace – SPA</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root {
+    --bg: #2a0f14;
+    --bg-light: #3a141b;
+    --text: #e6f7ff;
+    --accent: #7fd8ff;
+    --border: #5c1d28;
+    --radius: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+
+header {
+    width: 100%;
+    padding: 25px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg);
+}
+
+header .logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    color: var(--accent);
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.btn-accent {
+    background: var(--accent);
+    padding: 10px 22px;
+    border-radius: var(--radius);
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: var(--bg-light);
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    color: var(--accent);
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+
+.services-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.services-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.services-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 0 100px;
+}
+
+.service-card {
+    border: 1px solid var(--border);
+    padding: 35px 20px;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.service-card img {
+    width: 55px;
+    margin-bottom: 15px;
+}
+
+
+.packages {
+    padding: 80px 20px;
+    text-align: center;
+    background: var(--bg-light);
+}
+
+.packages-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 100px;
+}
+
+.package-card {
+    border: 1px solid var(--border);
+    padding: 35px 25px;
+    border-radius: var(--radius);
+}
+
+.price {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-family: "Playfair Display", serif;
+}
+
+.package-card ul {
+    margin: 20px 0;
+    text-align: left;
+    line-height: 1.9;
+}
+
+
+.appointment {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.appointment-form {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-items: center;
+}
+
+input, select {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    padding: 14px;
+    border-radius: var(--radius);
+    color: var(--text);
+}
+
+
+.newsletter {
+    background: var(--bg-light);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.newsletter input {
+    width: 350px;
+    margin-right: 10px;
+}
+
+
+footer {
+    background: #0a0a0a;
+    padding: 60px 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+footer h3 {
+    color: var(--accent);
+    font-family: "Playfair Display", serif;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+    line-height: 2;
+}
+
+footer ul li {
+    opacity: 0.7;
+}
+.input-icon input {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/456/456212.png');
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 14px center;
+    padding-left: 45px;
+}
+
+.input-icon:nth-child(2) input {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/561/561127.png');
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">Glow & Grace</div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <a href="#" class="btn-accent">Book Now</a>
+</header>
+
+<section class="hero">
+    <h1>Services</h1>
+    <p>Choose the experience that suits you</p>
+</section>
+
+<section class="services-section" id="services">
+    <h2 class="services-title">Our Services</h2>
+    <p>Premium treatments tailored for your unique style</p>
+
+    <div class="services-grid">
+        <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/10534/10534237.png"/><p>Hair Cut</p></div>
+        <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/11517/11517380.png"/><p>Shaving</p></div>
+        <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/10878/10878994.png"/><p>Hair Dye</p></div>
+        <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/878/878190.png"/><p>Facial</p></div>
+        <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/3220/3220668.png"/><p>Keratine</p></div>
+        <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/10015/10015620.png"/><p>Hair Removal</p></div>
+        <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/4698/4698233.png"/><p>Hair Treatment</p></div>
+        <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/3884/3884469.png"/><p>Wedding Package</p></div>
+    </div>
+</section>
+
+<section class="packages" id="packages">
+    <h2 class="services-title">Our Packages</h2>
+
+    <div class="packages-grid">
+        <div class="package-card">
+            <h3>Grooming Package</h3>
+            <div class="price">$520</div>
+            <ul>
+                <li>Premium Haircut</li>
+                <li>Beard Styling</li>
+                <li>Finishing Touch</li>
+            </ul>
+            <a class="btn-accent" href="#">Choose Plan</a>
+        </div>
+
+        <div class="package-card">
+            <h3>Luxury Grooming</h3>
+            <div class="price">$690</div>
+            <ul>
+                <li>Haircut + Beard</li>
+                <li>Steam Towel</li>
+                <li>Relax Massage</li>
+            </ul>
+            <a class="btn-accent" href="#">Choose Plan</a>
+        </div>
+
+        <div class="package-card">
+            <h3>Wedding Package</h3>
+            <div class="price">$950</div>
+            <ul>
+                <li>Full Grooming</li>
+                <li>Color Styling</li>
+                <li>Luxury Facial Spa</li>
+            </ul>
+            <a class="btn-accent" href="#">Choose Plan</a>
+        </div>
+    </div>
+</section>
+
+<section class="appointment" id="contact">
+    <h2 class="services-title">Make an Appointment</h2>
+    <p>Select the date and time that best suits you</p>
+
+    <form class="appointment-form">
+        <div class="input-icon">
+            <input type="text" placeholder="Full Name" />
+        </div>
+        <div class="input-icon">
+            <input type="email" placeholder="Email Address" />
+        </div>
+        <div class="input-icon">
+            <input type="date" />
+        </div>
+        <div style="grid-column: span 3;">
+            <select>
+                <option>Select Service</option>
+                <option>Haircut</option>
+                <option>Shaving</option>
+                <option>Facial</option>
+            </select>
+        </div>
+        <div style="grid-column: span 3;">
+            <button class="btn-accent" type="submit">Book Appointment</button>
+        </div>
+    </form>
+
+
+<div id="register-section" style="margin-top:40px; text-align:center;">
+    <h3>Crear una cuenta</h3>
+    <form class="register-form" style="max-width:600px; margin:20px auto; display:grid; gap:15px; text-align:left;">
+        <input type="text" placeholder="Nombre completo" />
+        <input type="email" placeholder="Correo electrónico" />
+        <input type="password" placeholder="Contraseña" />
+        <button class="btn-accent" type="submit">Registrarme</button>
+    </form>
+</div>
